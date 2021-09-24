@@ -46,8 +46,8 @@ function validate(){
         }
     }
 
-    if(document.myForm.schoolyear.value =="") {
-        document.getElementById("syErr").innerHTML="Please enter the current School Year";
+    if(document.myForm.schoolyear.value =="-1") {
+        document.getElementById("syErr").innerHTML="Please enter the School Year";
         document.myForm.schoolyear.focus();
           return false;
     } 

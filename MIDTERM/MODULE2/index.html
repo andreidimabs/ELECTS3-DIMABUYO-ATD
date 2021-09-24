@@ -47,13 +47,19 @@
 
         <div class="row">
             <label><b>e-Mail Address</label></b>
-            <input type="text" name="Email"/>
+            <input type="email" name="Email"/>
             <div class="error" id="emailErr"></div>
         </div>
 
         <div class="row">
             <label><b>School Year</label></b>
-            <input type="text" name="schoolyear"/>
+            <select name="schoolyear">
+                <option value="-1" selected>[Choose a School Year]</option>
+                <option value ="1" >S.Y. 2018-2019</option>
+                <option value ="2" >S.Y. 2019-2020</option>
+                <option value ="3" >S.Y. 2020-2021</option>
+                <option value ="4" >S.Y. 2021-2022</option>
+            </select>
             <div class="error" id="syErr"></div>
         </div>
 
