@@ -74,14 +74,14 @@ function validate(){
     } 
 
     if (document.myForm.units.value == ""){
-            document.getElementById("unitsErr").innerHTML="Please enter your Total Number of Units";
+            document.getElementById("unitErr").innerHTML="Enter the total number of units you have";
             document.myForm.units.focus();
             return false;
         } 
         else {
             var num = document.myForm.units.value;
             if(isNaN(num)){
-            alert("Please enter numeric values");
+            alert("Enter proper numeric values");
             return false;
             }
         }
