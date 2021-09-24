@@ -3,19 +3,19 @@ function validate(){
     if(document.myForm.id.value=="" || isNaN(
         document.myForm.id.value) ||
         document.myForm.id.value.length !=6){
-            document.getElementById("IDErr").innerHTML="Student Number contains 6 digit only";
+            document.getElementById("IDErr").innerHTML="A Student Number consists of 6 numbers";
             document.myForm.id.focus();
             return false;
         }
     
     if(document.myForm.name.value =="") {
-        document.getElementById("nameErr").innerHTML="Please enter your Student Name";
+        document.getElementById("nameErr").innerHTML="Please enter your Full Name";
         document.myForm.name.focus();
         return false;
     }
 
     if(document.myForm.gender.value == "-1"){
-        document.getElementById("genderErr").innerHTML="Please choose a gender";
+        document.getElementById("genderErr").innerHTML="Please choose your gender";
         return false;
     }
     
@@ -28,7 +28,7 @@ function validate(){
     if(document.myForm.zipcode.value=="" || isNaN(
         document.myForm.zipcode.value) ||
         document.myForm.zipcode.value.length !=4){
-            document.getElementById("zipErr").innerHTML="Zip code contains 4 digits only";
+            document.getElementById("zipErr").innerHTML="A Zip code consists of 4 digits";
             document.myForm.zipcode.focus();
             return false;
         }
@@ -40,14 +40,14 @@ function validate(){
     } else {
         var regex = /^\S+@\S+\.\S+$/;
         if(regex.test(document.myForm.Email.value) == false) {
-            document.getElementById("emailErr").innerHTML="Please use the proper format of e-mail";
+            document.getElementById("emailErr").innerHTML="Please use a valid e-mail";
             document.myForm.Email.focus();
             return false;
         }
     }
 
     if(document.myForm.schoolyear.value =="") {
-        document.getElementById("syErr").innerHTML="Please enter your School Year";
+        document.getElementById("syErr").innerHTML="Please enter the current School Year";
         document.myForm.schoolyear.focus();
           return false;
     } 
