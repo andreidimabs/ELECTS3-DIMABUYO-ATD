@@ -1,0 +1,120 @@
+<!doctype html>
+<html>   
+<link rel="stylesheet" href="./css/style.css">
+<script src="./script/validation.js"></script>
+<script  type="text/javascript" src = "./jQuery/jquery360.js"></script>
+<script type="text/javascript" src="./jQuery/jqueryvalidation.js"></script>
+<script type="text/javascript" src="./jQuery/jquerysubmit.js"></script>
+<script type="text/javascript" src="./jQuery/jquerydropdown.js"></script>
+
+<body>
+    <h2>Form Validation</h2>
+    
+    <form name="myForm" id="testForm" action="registered.php" onsubmit="return(validate());">
+    
+        <div class="row">
+            <label><b>Student ID</b></label>
+            <input type="text" name="id"/>
+            <div class="error" id="IDErr"></div>
+         </div>
+        
+        <div class="row">
+            <label><b>Student Name</label></b>
+            <input type="text" name="name"/>
+            <div class="error" id="nameErr">Write your name in this format Juan Dela Cruz</div>
+        </div>
+
+        <div class="row">
+        <label><b>Gender</label></b>
+            <select class="ddown1"id="dropdwn1" name="gender">
+                <option value="-1" selected>[Choose Your Gender]</option>
+                <option value ="1" >Male</option>
+                <option value ="2" >Female</option>
+                <option value ="3" >Others</option>
+                <option value ="4" >Prefer not to say</option>
+            </select>
+        </div>
+            <div class="error" id="genderErr"></div>
+        </div>
+
+        <div class="row">
+            <label><b>Address</label></b>
+            <input type="text" name="address"/>
+            <div class="error" id="addErr"></div>
+        </div>
+
+        <div class="row">
+            <label><b>Zip Code</label></b>
+            <input type="text" name="zipcode"/>
+            <div class="error" id="zipErr"></div>
+        </div>
+
+        <div class="row">
+            <label><b>e-Mail Address</label></b>
+            <input type="text" name="Email"/>
+            <div class="error" id="emailErr"></div>
+        </div>
+
+        <div class="row">
+            <label><b>School Year</label></b>
+            <select class="ddown2" id="dropdwn2" name="schoolyear">
+                <option value="-1" selected>[Choose a School Year]</option>
+                <option value ="1" >S.Y. 2018-2019</option>
+                <option value ="2" >S.Y. 2019-2020</option>
+                <option value ="3" >S.Y. 2020-2021</option>
+                <option value ="4" >S.Y. 2021-2022</option>
+            </select>
+            <div class="error" id="syErr"></div>
+        </div>
+
+        <div class="row">
+            <label><b>Semester</label></b>
+            <div class="form-inline">
+                <input type="radio" name="semester">1st Semester</input>
+                <input type="radio" name="semester">2nd Semester</input>
+                <input type="radio" name="semester">Summer Semester</input>
+            </div>
+           <div class="error" id="semErr"></div>
+        </div>
+
+        <div class="row">
+            <label><b>Course</label></b>
+            <select class="ddown3" id="dropdwn3" name="course">
+                <option value="-1" selected>[Choose Your Course]</option>
+                <option value ="1" >BSArchi</option>
+                <option value ="2" >BSCE</option>
+                <option value ="3" >BSCPE</option>
+                <option value ="4" >BSECE</option>
+            </select>
+           <div class="error" id="courseErr"></div>
+        </div>
+      
+        <div class="row">
+            <label><b>Year Level</label></b>
+            <div class="form-inline">
+                <input type="radio" name="yearlevel">1st Year</input>
+                <input type="radio" name="yearlevel">2nd Year</input>
+                <input type="radio" name="yearlevel">3rd Year</input>
+                <input type="radio" name="yearlevel">4th Year</input>
+            </div>
+           <div class="error" id="ylErr"></div>
+        </div>
+        
+        <div class="row">
+            <label><b>Section</label></b>
+            <input type="text" name="section"/>
+            <div class="error" id="sectErr"></div>
+        </div>
+    
+        <div class="row">
+            <label><b>Total Number of Units</label></b>
+            <input type="text" name="units"/>
+            <div class="error" id="unitErr"></div>
+        </div>
+    
+
+        <input type="submit" class="submitb" id="submit" value="Submit" />
+       
+    </form>
+</body>
+</html>
