@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Relative Value</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+
+.box{
+    width: 1000px;
+    height: 500px;
+    background: #9cfc93;
+    margin-top: 30px;
+    border-style: solid;
+    border-color:rgb(16, 174, 185);
+    position: relative;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".box").animate({
+            bottom: "+=25px",
+            left: "+=25px",
+            width: "-=50px",
+            height: "-=50px"
+            
+        });
+      
+        });
+    });
+
+
+</script>
+
+</head>
+
+<body>
+  <button type="button">Animate</button>
+  <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Multiple One by One</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+.box{
+    width: 250px;
+    height: 250px;
+    background: #9cfc93;
+    margin-top: 50px;
+    border-style: solid;
+    border-color:rgb(16, 174, 185);
+}
+</style>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".box")
+            .animate({width:  "500px"})
+            .animate({ height: "500px"})
+            .animate({marginLeft: "150px"})
+            .animate({borderWidth: "20px"})
+            .animate({opacity: 0.5});
+    });
+});
+
+</script>
+
+</head>
+
+<body>
+  <button type="button">Animate</button>
+  <div class="box"></div>
+</body>
+
+</html>
