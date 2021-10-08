@@ -4,13 +4,35 @@
 <title>Predefined</title>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <style>
-.box{
-    width: 1300px;
+
+.header{
+    margin: auto;
+  width: 5%;
+  border: 3px solid green;
+  padding: 10px;
+}
+.box1{
+    width: 500px;
+    height: 400px;
+    background: #fcb193;
+    margin-top: 50px;
+    border-style: solid;
+    border-color:rgb(33, 53, 54);
+    position: relative;
+    float:left;
+
+
+}
+.box2{
+    width: 500px;
     height: 400px;
     background: #9cfc93;
     margin-top: 50px;
     border-style: solid;
     border-color:rgb(16, 174, 185);
+    position: relative;
+    float:right;
+
 
 }
 </style>
@@ -18,7 +40,11 @@
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $(".box")
+        $(".box1")
+        .animate({
+        height: 'toggle'           
+        });
+        $(".box2")
         .animate({
         height: 'toggle'           
         });
@@ -32,8 +58,11 @@ $(document).ready(function(){
 </head>
 
 <body>
+    <div class="header">
   <button type="button">Animate</button>
-  <div class="box"></div>
+    </div>
+  <div class="box1"></div>
+  <div class="box2"></div>
 </body>
 
 </html>
